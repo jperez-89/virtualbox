@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+/* CSS GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* overflow: hidden; */
+  background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
+  background: linear-gradient(to right, #2c3e50, #2980b9);
+}
+
+/* CSS APLICADO AL LOGIN  */
+.contenedorLogin {
+  width: 90vw;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  padding: 0 8rem;
+}
+
+.imagenfondo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80%;
+  padding: 0 1rem;
+}
+
+.logueo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+form {
+  width: 360px;
+}
+
+fieldset label {
+  display: block;
+  padding: 4px;
+  margin: 4px;
+}
+
+/* CSS APLICADO AL REGISTRO  */
+.contenedorRegistro {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 7rem;
+  padding: 0 2rem;
+}
+
+.Registro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.imagenRegistro {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 55%;
+}
+
+/* CSS APLICADO MI UNIDAD  */
+.Salir {
+  display: flex;
+  justify-content: flex-end;
+}
+
+h6{
+  color: aliceblue;
+}
+
+nav {
+  padding-top: 10px;
+}
+
+#alert{
+  display: none;
+}
+
+/* CSS APLICADO A AGREGAR ARCHIVOS  */
+.contenedorAgreArchivos {
+  height: 40vh;
+  padding: 10px 10rem;
+}
+
+.hide{
+  display: none;
+}

@@ -1,0 +1,46 @@
+#---------------------------------------------------------------------
+# Impide navegar en los direcctorios del sitio
+#---------------------------------------------------------------------
+#Options All -Indexes
+
+
+#---------------------------------------------------------------------
+# En caso de error presentar paginas personalizadas
+#---------------------------------------------------------------------
+#ErrorDocument 400 https://10.90.30.210/york/mybox/errores/400.php
+#ErrorDocument 401 https://10.90.30.210/york/mybox/errores/403.php
+#ErrorDocument 403 https://10.90.30.210/york/mybox/errores/403.php
+#ErrorDocument 404 https://10.90.30.210/york/mybox/errores/404.php
+#ErrorDocument 500 https://10.90.30.210/york/mybox/errores/500.php
+
+
+#---------------------------------------------------------------------
+# Evita tener acceso a los archivos con las siguientes extensiones
+#---------------------------------------------------------------------
+<FilesMatch "(\.(bak|config|inc|ini|log|sh|sql)|~)$">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+
+
+#---------------------------------------------------------------------
+# Puede escribir las siguientes instrucciones en este archivo.
+# Estas directivas fueron escritas en el archivo apache2.conf.
+#---------------------------------------------------------------------
+RewriteEngine on
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+
+
+
+
+
+
+
+
+
+
+
+
