@@ -23,10 +23,10 @@
 <?php
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$server = $url["us-cdbr-iron-east-05.cleardb.net"];
-$username = $url["b5bf52783a17e5"];
-$password = $url["90ac0673"];
-$db = substr($url["path"], 1);
+$server = "us-cdbr-east-02.cleardb.com";
+$username = "b480d8977a2502";
+$password = "485cd840";
+$db = "heroku_bede1c0d72a2c3e";
 
 $conex = new mysqli($server, $username, $password, $db);
 
