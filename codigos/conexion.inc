@@ -1,4 +1,4 @@
-<?php
+
     //parametros de conexion (opcionales)
 	//$servername   = "localhost";
     //$usuario   = getenv('DB_USER');
@@ -19,7 +19,6 @@
         //echo "<strong>Descripción...:</strong> " . mysqli_connect_error() . "<br>";
         //exit;
     //}
-//?>
 
 <?php
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -30,3 +29,5 @@ $password = $url["90ac0673"];
 $db = substr($url["path"], 1);
 
 $conex = new mysqli($server, $username, $password, $db);
+
+?>
