@@ -33,7 +33,7 @@ if ((isset($_POST['txtUsua'])) && (isset($_POST['txtContra']))) {
 
 <head>
     <?php include_once('partes/encabe.inc'); ?>
-    <title>Ingreso al Sitio</title>
+    <title>Ingresar</title>
 </head>
 
 <body class="container-fluid">
