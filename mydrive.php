@@ -152,7 +152,7 @@ if ($_SESSION["autenticado"] != "SI") {
 						echo "</table>";
 					}
 
-					mysqli_free_result($res2, $res3);
+					mysqli_free_result($res2,$res3);
 					if ($conta == 0) echo '<h6 class="text-muted">Sin archivos</h6>';
 					if ($_SESSION['exito'] == 'ArchiGuardado') {
 						echo "<script> MostrarSweetAlert('success','Archivo Guardado'); </script>";
