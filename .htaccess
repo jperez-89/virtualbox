@@ -28,9 +28,9 @@
 # Puede escribir las siguientes instrucciones en este archivo.
 # Estas directivas fueron escritas en el archivo apache2.conf.
 #---------------------------------------------------------------------
-RewriteEngine on
-RewriteCond %{HTTPS} !on
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+#RewriteEngine on
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 
 
