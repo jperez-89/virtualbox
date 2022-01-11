@@ -18,7 +18,6 @@ if (!empty($_POST['id'])) {
           $query = "update carpetas set Estado = 0 where id = {$_POST['id']};";
           $result = mysqli_query($conex, $query);
           $respuesta = true;
-          echo $respuesta;
      } catch (Exception $e) {
           echo 'Excepción capturada: ', $e->getMessage(), "\n";
      } finally {
