@@ -21,7 +21,7 @@ if (!empty($_POST['id'])) {
      } catch (Exception $e) {
           echo 'Excepción capturada: ', $e->getMessage(), "\n";
      } finally {
-          mysqli_close($result);
+          mysqli_close($conex);
      }
      
      if ($result) {
