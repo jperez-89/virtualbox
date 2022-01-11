@@ -24,12 +24,14 @@ if (!empty($_POST['id'])) {
           mysqli_close($conex);
      }
      
-     if ($result) {
-          $_SESSION['exito'] = 'CarpetaBorrada';
-          echo $respuesta;
+     if ($respuesta) {
+          header("Location: ../mydrive.php");
+          // $_SESSION['exito'] = 'CarpetaBorrada';
+          // echo $respuesta;
      } 
      else {
-          $_SESSION['exito'] = 'CarpetaNoBorrada';
-          echo $respuesta; 
+          echo "No se logró borrar la carpeta";
+          // $_SESSION['exito'] = 'CarpetaNoBorrada';
+          // echo $respuesta; 
      }
 }
