@@ -56,7 +56,7 @@ if ($_SESSION["autenticado"] != "SI") {
 		<!-- TABLA MIS CARPETAS -->
 				<?php
 				$conta = 0;
-				$qry1 = sprintf("select * from carpetas where idUsuario = '%s' and nomCarpeta != '%s'", $_SESSION['id'], 'Raiz');
+				$qry1 = sprintf("select * from carpetas where Estado 0 and idUsuario = '%s' and nomCarpeta != '%s'", $_SESSION['id'], 'Raiz');
 				$res1 = mysqli_query($conex, $qry1);
 				if(mysqli_num_rows($res1) > 0){
 					echo '';
