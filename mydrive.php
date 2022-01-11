@@ -88,7 +88,7 @@ if ($_SESSION["autenticado"] != "SI") {
 						echo "<td>$compartido[nombre]</td>";
 						echo "<td>$fila[fchCreacion] </td>";
 						echo "<td><a name='id' value='$fila[id]' class='btn btn-info btn-sm' href=codigos/comparCarpeta.php?id=$fila[id]>Compartir</a></td>";
-						echo "<td><a class='btn btn-danger btn-sm' href=codigos/borCarpeta.php?id=$fila[id]>Eliminar</a></td>";
+						echo "<td><a class='btn btn-danger btn-sm' onClick=EliminarCarpeta($fila[id])>Eliminar</a></td>";
 						echo "</tr>";
 					}
 					echo '</tbody>';

@@ -26,13 +26,13 @@ if (!empty($_POST['id'])) {
      }
      
      if ($respuesta) {
-          header("Location: ../mydrive.php");
-          // $_SESSION['exito'] = 'CarpetaBorrada';
-          // echo $respuesta;
+          // header("Location: ../mydrive.php");
+          $_SESSION['exito'] = 'CarpetaBorrada';
+          echo $respuesta;
      } 
      else {
           echo "No se logró borrar la carpeta";
-          // $_SESSION['exito'] = 'CarpetaNoBorrada';
-          // echo $respuesta; 
+          $_SESSION['exito'] = 'CarpetaNoBorrada';
+          echo $respuesta; 
      }
 }

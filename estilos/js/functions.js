@@ -72,6 +72,55 @@ function EliminarArchi(id) {
     });
 };
 
+/*--------->  Elimina la carpeta seleccionado <---------*/
+function EliminarCarpeta(id) {
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: "btn btn-success m-1",
+      cancelButton: "btn btn-danger m-1",
+    },
+    buttonsStyling: false,
+  });
+
+  swalWithBootstrapButtons
+    .fire({
+      title: "Está seguro de eliminar la carpeta?",
+      text: "Recuerde que no puede revertir esto!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Sí, eliminar!",
+      cancelButtonText: "No, cancelar!",
+      reverseButtons: true,
+    })
+    .then((result) => {
+      if (result.value) {
+        try {
+          $.post(
+            "codigos/borCarpeta.php", {
+              id: id,
+            },
+            function (res) {
+              if (res == "1") {
+                location.href = "mydrive.php";
+                MostrarNotify("Archivo Eliminado", "success");
+              } else {
+                MostrarNotify("Archivo no Eliminado", "error");
+              }
+            }
+          );
+        } catch (e) {
+          console.log(e);
+        }
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        //swalWithBootstrapButtons.fire(
+        //    'Cancelled',
+        //    'Your imaginary file is safe :)',
+        //    'error'
+        //)
+      }
+    });
+};
+
 /*--------->  Busca los usuarios con los que se compartio el archivo <---------*/
 function ArchivoCompartidoCon(id) {
   $.post(
