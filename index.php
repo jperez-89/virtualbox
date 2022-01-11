@@ -46,11 +46,11 @@ if ((isset($_POST['txtUsua'])) && (isset($_POST['txtContra']))) {
             <div class="card">
                 <form action="<?php echo $Accion_Formulario; ?>" method="post">
                     <div class="card-header">
-                        <strong>Login</strong>
+                        <strong>Iniciar Sesión</strong>
                     </div>
                     <div class="card-body">
                         <fieldset>
-                            <label>Usuario:</label><input type="text" name="txtUsua" size="22" maxlength="15" required /><br>
+                            <label>Usuario:</label><input type="text" name="txtUsua" size="22" maxlength="20" required /><br>
                             <label>Contrase&ntilde;a:</label><input type="password" name="txtContra" size="22" maxlength="15" required />
                         </fieldset>
                     </div>

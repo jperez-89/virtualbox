@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Error 404</title>
-	<meta http-equiv="refresh" content="6; url=../index.php">
+	<meta http-equiv="refresh" content="3; url=../index.php">
   </head>
   <body>
 		<?php
