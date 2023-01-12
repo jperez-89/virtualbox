@@ -42,7 +42,7 @@ if ($_SESSION["autenticado"] != "SI") {
 							Agregar
 						</button>
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" data-target="#ModalArchivo" data-toggle="modal" href="">Agregar Archivo</a>
+							<a class="dropdown-item" data-target="#ModalArchivo" data-toggle="modal" href="">Agregar Archivos</a>
 							<a class="dropdown-item" data-target="#ModalCarpeta" data-toggle="modal" href="">Agregar Carpeta</a>
 						</div>
 					</div>
